@@ -1,0 +1,27 @@
+name: 01 Datatypes - Tests - Rust
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - '.github/workflows/01-datatypes/**'
+      - '01-datatypes/rust'
+
+defaults:
+  run:
+    working-directory: 01-datatypes/rust
+
+
+env:
+  CARGO_TERM_COLOR: always
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run tests
+        run: cargo test --verbose
