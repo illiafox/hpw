@@ -5,7 +5,7 @@ on:
     branches:
       - main
     paths:
-      - '.github/workflows/01-datatypes/**'
+      - '.github/workflows/01-datatypes-rust.yml'
       - '01-datatypes/rust'
 
 defaults:
